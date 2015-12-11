@@ -60,15 +60,53 @@ th:src="@{/webjars/jquery/2.1.3/jquery.min.js}"></script>
   <form id="search" action="search" method="get">
    <div class="row">
     <input type="text" class="form-control" id="q" name="q"
-     placeholder="Escribe algo que quieras buscar"/>
+     placeholder="Write what you want to search" required="true"/>
+     
+    <select id="lang" name="lang" class="form-control">
+    	<option value="all">Select search language</option>
+     	<option value="en">English</option>
+    	<option value="fr">French</option>
+    	<option value="es">Spanish</option>
+    	<option value="de">German</option>
+    	<option value="it">Italian</option>
+    	<option value="pt">Portuguese</option>
+    	<option value="hi">Hindi</option>
+    </select>
+    
+    Number of tweets retrieved: 
+    <input type="number" min="0" id="count" name="count">
+    	  (0 to retrieve all)
+    </input>
+    
    </div>
    <div class="row">&nbsp;</div>
    <div class="row">
     <button type="submit" class="btn btn-default center-block" >Buscar</button>
    </div>
   </form>
+  
+  <!-- Show prgress -->
+  <div align="center" class="loading" style="display: none;">
+  	<br></br><br></br>
+  	<img height="25" th:src="@{/ajax-loader.gif}" src="../static/ajax-loader.gif"></img>
+  </div>
+  
   <div class="row">&nbsp;</div>
   <div id="resultsBlock"></div>  
  </div>
 </body>
 </html>
+
+<script>
+	function checkForm() {
+		q = documents.getElementById("q")
+		if (q.value == "") {
+			alert("Field the field");
+		    q.focus();
+			return false;
+		}
+		
+		return true;
+	}
+
+</script>

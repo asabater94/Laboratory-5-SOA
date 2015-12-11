@@ -4,11 +4,14 @@ $(document).ready(function() {
 });
 
 function registerSearch() {
+	
 	$("#search").submit(function(ev){
+		$(".loading").show();
 		event.preventDefault();
-		$.get($(this).attr('action'), {q: $("#q").val()}, function(data) {
+		$.get($(this).attr('action'), {q: $("#q").val(), lang: $("#lang").val(), count: $("#count").val()}, function(data) {
 			$("#resultsBlock").html(Mustache.render(template, data));
-		});	
+			$(".loading").hide();
+		});
 	});
 }
 
