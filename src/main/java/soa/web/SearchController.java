@@ -52,7 +52,6 @@ public class SearchController {
     	}
     	
     	headers.put("CamelTwitterKeywords", headerValue);
-    	System.out.println(headerValue);
     	if (!count.equals("")) {		// Sets the number of results
         	headers.put("CamelTwitterCount", count);
     	}
