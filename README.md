@@ -25,7 +25,7 @@ Carlos Escuín Blasco | 545003 | [repo](https://github.com/xarlieskin/Laboratory
 Alberto Revel | 628704
 Raul Piracés Alastuey | 490790 | [repo](https://github.com/piraces/Laboratory-5-SOA)
 Adrian Moreno Jimeno | 631537
-Alberto Sabater Bailón | 546297 | [repo](https://github.com/asabater94/Laboratory-5-SOA)
+Alberto Sabater Bailón | 546297 | [repo](https://github.com/asabater94/Laboratory-5-SOA) | UI and search functionalities improved | :gift:
 Agustin Navarro Torres | 587570
 Alejandro Solanas Bonilla | 647647
 Christian García Artero | 597578
